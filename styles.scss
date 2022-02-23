@@ -1,0 +1,46 @@
+$bg : aqua;
+$bg2 : black;
+
+
+@mixin corner($radius) {
+    border-radius: $radius;
+}
+
+@mixin transition {
+    transition: all 0.5s ease-in-out;
+}
+
+body{
+    background-color: $bg;
+    font-family: sans-serif;
+}
+.wrapper {
+    text-align: center;
+    color : $bg2;
+     h1{
+        font-family : 'Roboto',sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+     }
+     #seconds,#tens{
+          font-size: 32px;
+     }
+     button{
+         @include corner(10px);
+         background-color: $bg;
+         color:$bg2; 
+         font-size : 18px; 
+        padding: 18px 10px;
+         width: 180px;
+         margin: 10px;
+         border: 1px solid $bg2;
+         cursor: pointer;
+         &:hover{
+            @include transition();
+             background-color: white;
+             color: $bg2;
+         }
+    }
+
+
+}
